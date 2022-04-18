@@ -34,7 +34,7 @@ const DebounceSrcatch = () => {
   }
 
   const apiCall = async() => {
-    const BASE_URL = 'http://api.weatherapi.com/v1/current.json?key=3ddafd9eb53941e6b7d110835221804 &q=';
+    const BASE_URL = 'https://api.weatherapi.com/v1/current.json?key=3ddafd9eb53941e6b7d110835221804 &q=';
     const parsedQuery = name.replaceAll(' ', '+');
     const url = `${BASE_URL}${parsedQuery}&aqi=no`;
     const fetchUrl = await fetch(url);

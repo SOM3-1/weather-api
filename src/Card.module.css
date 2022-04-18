@@ -3,13 +3,8 @@
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-wrap: nowrap; 
-    width: 700px;
+    width: auto;
     margin: 10px;
-    @media(min-width:768px) {
-      width:80%;
-      white-space:nowrap;
-      margin-top: 0;
-  }
   }
 
 .newcard {
@@ -19,25 +14,16 @@
     padding-bottom: 1rem;
     border-bottom: 1px solid #ccc; 
     flex-wrap: nowrap;
-    @media(min-width:768px) {
-      width:80%;
-      white-space:nowrap;
-      margin-top: 0;
-  }
   }
   
   .input {
+    display: inline-block;
     width: 20%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     color: black;    
-    margin-left: 40%;
-    @media(min-width:768px) {
-      width:80%;
-      white-space:nowrap;
-      margin-top: 0;
-  }
+    margin-left: 40% ;
   }
 
 .button {
@@ -52,11 +38,6 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
-    @media(min-width:768px) {
-      width:80%;
-      white-space:nowrap;
-      margin-top: 0;
-  }
 }
 
 .display {
@@ -68,14 +49,9 @@
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 1px 8px rgba(255, 254, 254, 0.25);
-    font-size: auto;
-    display: flex;
+    font-size: 20px;
+    display: 10px;
     flex-wrap: nowrap;
-    @media(min-width:768px) {
-      width:80%;
-      white-space:nowrap;
-      margin-top: 0;
-  }
   }
 
   .delete {
@@ -87,7 +63,6 @@
   background-color: #addfbc;
   padding: 1rem;
   margin: 2rem auto;
-  width: 50rem;
   max-width: 10%;
   border-radius: 12px;
   text-align: center;
@@ -95,5 +70,4 @@
   font-size: auto;
   display: flex;
   flex-wrap: nowrap;
-  margin-left: 50% auto;
 }

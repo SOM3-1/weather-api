@@ -41,6 +41,7 @@
 }
 
 .display {
+    display: inline-block;
     background-color: #a892ee;
     padding: 1rem;
     margin: 2rem auto;
@@ -52,9 +53,14 @@
     font-size: auto;
     display: flex;
     flex-wrap: nowrap;
+    @media only screen and (min-width: 768px) {
+      
+        display: flex;
+      }
   }
 
   .delete {
+    display: inline-block;
     color: black;
     margin-top : 150%;
     display: flex;
@@ -65,6 +71,7 @@
 }
 
 .icon {
+  display: inline-block;
   background-color: #addfbc;
   padding: 1rem;
   margin: 2rem auto;

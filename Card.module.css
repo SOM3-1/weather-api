@@ -2,9 +2,7 @@
     border-radius: auto;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
     display: flex;
-    flex-wrap: nowrap; 
-    width: auto;
-    margin: 10px;
+    flex-wrap: nowrap;
   }
 
 .newcard {
@@ -12,7 +10,11 @@
     justify-content: space-between;
     margin: 1rem;
     padding-bottom: 1rem;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid #ccc; 
+    border-top: 1px solid rgb(184, 187, 162); 
+    border-right: 1px solid rgb(201, 221, 25); 
+    border-left: 1px solid rgb(201, 221, 25); 
     flex-wrap: nowrap;
   }
   
@@ -41,7 +43,6 @@
 }
 
 .display {
-    display: inline-block;
     background-color: #a892ee;
     padding: 1rem;
     margin: 2rem auto;
@@ -50,28 +51,21 @@
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 1px 8px rgba(255, 254, 254, 0.25);
-    font-size: auto;
-    display: flex;
+    font-size: 20px;
     flex-wrap: nowrap;
-    @media only screen and (min-width: 768px) {
-      
-        display: flex;
-      }
+    display: flex;
   }
 
   .delete {
-    display: inline-block;
     color: black;
-    margin-top : 150%;
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);   
-    box-sizing: border-box;   
+    margin-top: 150%;
+    margin-left: auto
 }
 
 .icon {
-  display: inline-block;
   background-color: #addfbc;
   padding: 1rem;
   margin: 2rem auto;

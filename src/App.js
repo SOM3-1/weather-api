@@ -1,9 +1,11 @@
-
-import DebounceSrcatch from "./UseDebunce";
+import WeatherData from "./weather/weatherQuery";
 
 function App() {
   return (
-   <DebounceSrcatch/>
+    <>
+      <h1 style={{ textAlign: "center" }}>Weather query</h1>
+      <WeatherData />
+    </>
   );
 }
 

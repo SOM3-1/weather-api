@@ -1,0 +1,82 @@
+.card {
+    border-radius: auto;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-wrap: nowrap; 
+    width: auto;
+    margin: 10px;
+  }
+
+.newcard {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc; 
+    flex-wrap: nowrap;
+  }
+  
+  .input {
+    display: block;
+    box-sizing: border-box;
+    color: black; 
+    margin-left: 40%; 
+  }
+
+  .inputText {
+    width: 30%;
+    height: 20px;
+    margin: 10px;
+    display: inline-flex;
+    
+  }
+
+.button {
+    color: black;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;   
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);   
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.display {
+    background-color: #a892ee;
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 10%;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(255, 254, 254, 0.25);
+    font-size: 20px;
+    display: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .delete {
+    color: black;
+    margin-top : 150%;
+}
+
+.icon {
+  background-color: #addfbc;
+  padding: 1rem;
+  margin: 2rem auto;
+  max-width: 10%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(255, 254, 254, 0.25);
+  font-size: auto;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.isa-error {
+  color: #D8000C;
+  background-color: #FFD2D2;
+  text-align: center;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+}

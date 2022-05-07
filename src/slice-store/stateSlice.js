@@ -1,9 +1,8 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 import {
-  manageApi,
   removeExistingLocation,
   existingLocation,
-} from "../weather/util";
+} from "../util";
 
 let initialState = {
   values: [],
@@ -17,20 +16,14 @@ export const slice = createSlice({
   reducers: {
     query(state, action) {
       const newArray = current(state.values);
-      let tempArray = [];
+      const tempObject = action.payload;
 
-      manageApi(action.payload).then((data) => {
-        if (data.location) {
-          tempArray.push(data);
-        }
-      });
-
-      if (tempArray.length) {
+      if (tempObject.location) {
         state.isApiRetrievedProperly = true;
 
-        const result = existingLocation(newArray, tempArray);
+        const result = existingLocation(newArray, tempObject);
         if (result.length === 0) {
-          state.values.unshift(...tempArray);
+          state.values.unshift(...[tempObject]);
         }
       } else {
         state.isApiRetrievedProperly = false;

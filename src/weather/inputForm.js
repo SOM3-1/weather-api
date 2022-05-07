@@ -2,14 +2,17 @@ import { useState, useRef, useEffect } from "react";
 import classes from "./Card.module.css";
 import { useDispatch } from "react-redux";
 import { sliceReducers } from "../slice-store/stateSlice";
+import { manageApi } from "../util";
 
 const InputForm = (props) => {
   const [name, setName] = useState("");
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
+
     e.preventDefault();
-    dispatch(sliceReducers.query(name));
+    const payload = await manageApi(name);
+    dispatch(sliceReducers.query(payload));
   };
 
   useEffect(() => {

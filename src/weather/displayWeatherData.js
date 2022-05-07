@@ -1,8 +1,17 @@
 import classes from "./Card.module.css";
+import { sliceReducers } from "../slice-store/stateSlice";
+
+import { useSelector, useDispatch } from "react-redux/es/exports";
 
 const DisplayWeatherData = (props) => {
-  const suggestions = props.results;
+  const suggestions = useSelector((state) => state.values);
+  const dispatch = useDispatch();
 
+  const removeLocation = (event, payload) => {
+    event.preventDefault();
+    dispatch(sliceReducers.remove(payload));
+  };
+  console.log(suggestions);
   return (
     <>
       {suggestions.length > 0 ? (
@@ -38,7 +47,7 @@ const DisplayWeatherData = (props) => {
               <div>
                 <button
                   className={classes.delete}
-                  onClick={(e) => props.onRemove(e, el.location.name)}
+                  onClick={(e) => removeLocation(e, el.location.name)}
                 >
                   Delete
                 </button>

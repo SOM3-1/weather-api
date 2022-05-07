@@ -1,19 +1,25 @@
 import { useState, useRef, useEffect } from "react";
 import classes from "./Card.module.css";
+import { useDispatch } from "react-redux";
+import { sliceReducers } from "../slice-store/stateSlice";
 
-const InputForm = (props) =>{
-    
-  const [name, setName] = useState("");  
+const InputForm = (props) => {
+  const [name, setName] = useState("");
+  const dispatch = useDispatch();
 
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(sliceReducers.query(name));
+  };
 
   useEffect(() => {
     inputRef.current.focus();
   });
 
   const inputRef = useRef(null);
-    return (<> 
-     <form onSubmit={(event)=> {props.onSearch(event,name)}}>
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
         <span className={classes.input}>
           <input
             placeholder="Enter city name..."
@@ -27,7 +33,8 @@ const InputForm = (props) =>{
           </button>
         </span>
       </form>
-      </>);
+    </>
+  );
 };
 
 export default InputForm;

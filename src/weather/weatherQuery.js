@@ -1,39 +1,25 @@
 import React, { useState } from "react";
 import { DisplayError } from "./displayError";
 import DisplayWeatherData from "./displayWeatherData";
-import { manageApi, existingLocation, removeExistingLocation } from "./util";
 import InputForm from "./inputForm";
+import { useDispatch, useSelector } from "react-redux";
+import { sliceReducers } from "../slice-store/stateSlice";
 
 const WeatherData = () => {
-  const [suggestions, setSuggestions] = useState([]);
-  const [apiProcessed, setapiProcessed] = useState(true);
+  const apiProcessed = useSelector((state)=> state.isApiRetrievedProperly)
+  const dispatch = useDispatch();
 
-  const handleSubmit = async (e, name) => {
+  const handleSubmit = (e, name) => {
     e.preventDefault();
-    const some = await manageApi(name);
-    if (some.location) {
-      setapiProcessed(true);
-      const result = existingLocation(suggestions, some);
-      if (result.length === 0) {
-        setSuggestions([some, ...suggestions]);
-      }
-    } else {
-      setapiProcessed(false);
-    }
+    dispatch(sliceReducers.query(name));
   };
 
-  const removeLocation = (event, payload) => {
-    event.preventDefault();
-    const result = removeExistingLocation(suggestions, payload);
-    setSuggestions([...result]);
-    setapiProcessed(true);
-  };
 
   return (
     <>
-      <InputForm onSearch={handleSubmit} />
+      <InputForm/>
       {!apiProcessed && <DisplayError />}
-      <DisplayWeatherData results={suggestions} onRemove={removeLocation} />
+      <DisplayWeatherData/>
     </>
   );
 };

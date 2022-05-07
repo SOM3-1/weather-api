@@ -1,6 +1,5 @@
 import classes from "./Card.module.css";
 import { sliceReducers } from "../slice-store/stateSlice";
-
 import { useSelector, useDispatch } from "react-redux/es/exports";
 
 const DisplayWeatherData = (props) => {

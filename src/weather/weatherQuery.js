@@ -1,8 +1,8 @@
 
-import { DisplayError } from "./displayError";
 import DisplayWeatherData from "./displayWeatherData";
 import InputForm from "./inputForm";
 import {useSelector } from "react-redux";
+import ErrorModal from "../Modal/errorModal";
 
 const WeatherData = () => {
   const apiProcessed = useSelector((state)=> state.isApiRetrievedProperly);
@@ -10,7 +10,7 @@ const WeatherData = () => {
   return (
     <>
       <InputForm/>
-      {!apiProcessed && <DisplayError />}
+      {!apiProcessed && <ErrorModal/>}
       <DisplayWeatherData/>
     </>
   );

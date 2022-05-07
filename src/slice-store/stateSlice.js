@@ -1,8 +1,5 @@
 import { createSlice, current } from "@reduxjs/toolkit";
-import {
-  removeExistingLocation,
-  existingLocation,
-} from "../util";
+import { removeExistingLocation, existingLocation } from "../util";
 
 let initialState = {
   values: [],
@@ -34,6 +31,9 @@ export const slice = createSlice({
       const newArray = current(state.values);
       const removedArray = removeExistingLocation(newArray, action.payload);
       state.values = removedArray;
+    },
+    errorHandler(state, action) {
+      state.isApiRetrievedProperly = action.payload;
     },
   },
 });

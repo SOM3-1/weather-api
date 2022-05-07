@@ -1,0 +1,11 @@
+h1{
+    background: repeating-linear-gradient(0deg, #0E0D0E 25%, #0E0D0E 50%, #171819 50%, #171819 75%);
+    background-size: 10px 10px;
+    height: 10vh;
+    overflow: hidden;
+    display: flex;
+    font-family: "Barlow", sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }

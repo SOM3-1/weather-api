@@ -1,8 +1,11 @@
 import classes from "./Card.module.css";
 import { sliceReducers } from "../slice-store/stateSlice";
 import { useSelector, useDispatch } from "react-redux/es/exports";
+import ReactGridLayout from "./displayResponsiveGridLayout";
 
-const DisplayWeatherData = (props) => {
+//Displaying weather using flexbox gone wrong 
+
+const DisplayWeatherData = () => {
   const suggestions = useSelector((state) => state.values);
   const dispatch = useDispatch();
 
@@ -10,7 +13,6 @@ const DisplayWeatherData = (props) => {
     event.preventDefault();
     dispatch(sliceReducers.remove(payload));
   };
-  console.log(suggestions);
   return (
     <>
       {suggestions.length > 0 ? (
@@ -55,6 +57,8 @@ const DisplayWeatherData = (props) => {
           ))}
         </div>
       ) : null}
+      
+      <ReactGridLayout/>
     </>
   );
 };

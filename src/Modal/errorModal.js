@@ -1,4 +1,4 @@
-import classes from "./ErrorModal.module.css";
+import classes from "./errorModal.module.css";
 import { createPortal } from "react-dom";
 import { useDispatch } from "react-redux";
 import { sliceReducers } from "../slice-store/stateSlice";

@@ -3,6 +3,7 @@ import DisplayWeatherData from "./displayWeatherData";
 import InputForm from "./inputForm";
 import {useSelector } from "react-redux";
 import ErrorModal from "../Modal/errorModal";
+import ReactGridLayout from "./displayResponsiveGridLayout";
 
 const WeatherData = () => {
   const apiProcessed = useSelector((state)=> state.isApiRetrievedProperly);
@@ -11,7 +12,8 @@ const WeatherData = () => {
     <>
       <InputForm/>
       {!apiProcessed && <ErrorModal/>}
-      <DisplayWeatherData/>
+      {/* <DisplayWeatherData/> */}
+      <ReactGridLayout/>
     </>
   );
 };

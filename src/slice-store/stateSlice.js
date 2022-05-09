@@ -5,6 +5,7 @@ let initialState = {
   values: [],
   loactionName: "",
   isApiRetrievedProperly: true,
+  loginStatus: false
 };
 
 export const slice = createSlice({
@@ -34,6 +35,9 @@ export const slice = createSlice({
     },
     errorHandler(state, action) {
       state.isApiRetrievedProperly = action.payload;
+    },
+    loginHandler(state, action) {
+      state.loginStatus = action.payload;
     },
   },
 });

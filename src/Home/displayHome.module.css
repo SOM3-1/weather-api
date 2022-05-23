@@ -5,13 +5,14 @@
   .someDiv {
     background: repeating-linear-gradient(0deg, #0E0D0E 25%, #0E0D0E 50%, #171819 50%, #171819 75%);
     background-size: 10px 10px;
-    height: 10vh;
+    min-height: 1vh;
     overflow: hidden;
     display: flex;
     font-family: "Barlow", sans-serif;
     justify-content: center;
     align-items: center;
     color: white;
+    position: relative;
     
   }
 
@@ -23,8 +24,8 @@
     font-family: "Barlow", sans-serif;
     color: white;
     position: absolute;
-    right: 20px;
-    top: 55px;
+    right: 2%;
+    top: 40%;
     cursor: pointer;
     font-size: 15px;
   }

@@ -23,6 +23,7 @@
     box-sizing: border-box;
     color: black; 
     margin-left: 40%; 
+    position: relative;
   }
 
   .inputText {
@@ -115,10 +116,11 @@
 }
 
 .textDiaply {
-  font-size:larger;
   text-align: center;
+  vertical-align: center;
   color:indigo;
   word-spacing:5px;
-  text-decoration:blink;
   font-family: Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  font-size: 2 rem;
 }

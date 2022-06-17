@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import classes from "./Card.module.css";
 import { useDispatch } from "react-redux";
-import { query,sliceReducers } from "../slice-store/stateSlice";
-import { manageApi } from "../util";
+import { query } from "../slice-store/stateSlice";
 
 const InputForm = (props) => {
   const [name, setName] = useState("");

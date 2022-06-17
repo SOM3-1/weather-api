@@ -124,3 +124,8 @@
   text-decoration: none;
   font-size: 2 rem;
 }
+
+.svg-display {
+    display: flex;
+  justify-content: center;
+}
